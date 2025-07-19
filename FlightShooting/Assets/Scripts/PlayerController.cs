@@ -2,8 +2,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Stage")]
     [SerializeField] private StageData _stageData;
+
+    [Header("Controller")]
     [SerializeField] private MovementController _movementController;
+    [SerializeField] private WeaponController _weaponController;
+
+    [Header("KeyCode")]
+    [SerializeField] private KeyCode _keyCodeAttack = KeyCode.Space;
 
     private void Update()
     {
@@ -11,6 +18,15 @@ public class PlayerController : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
         _movementController.MoveTo(new Vector3(x, y, 0.0f));
+
+        if (Input.GetKeyDown(_keyCodeAttack))
+        {
+            _weaponController.StartFiring();
+        }
+        else if (Input.GetKeyUp(_keyCodeAttack))
+        {
+            _weaponController.StopFiring();
+        }
     }
 
     private void LateUpdate()
