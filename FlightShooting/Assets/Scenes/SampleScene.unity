@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ba9a8788141cc4d9097c6a69cb0dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stageData: {fileID: 11400000, guid: 1475a2a1f5e4af0429900827595c68c4, type: 2}
   _movementController: {fileID: 1295968399}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
