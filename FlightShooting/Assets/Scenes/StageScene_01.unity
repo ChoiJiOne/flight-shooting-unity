@@ -200,6 +200,8 @@ MonoBehaviour:
   _stageData: {fileID: 11400000, guid: 1475a2a1f5e4af0429900827595c68c4, type: 2}
   _enemyPrefab: {fileID: 6705557482175183361, guid: 970ad7e0023ecf14ea73466bab4e9619, type: 3}
   _spawnTime: 0.35
+  _enemyHpPrefab: {fileID: 2956368680530046933, guid: a6918d65c80611747a5159e22d85b8bf, type: 3}
+  _canvasTransform: {fileID: 1663837145}
 --- !u!4 &360425022
 Transform:
   m_ObjectHideFlags: 0
