@@ -870,6 +870,7 @@ MonoBehaviour:
   _weaponController: {fileID: 1295968401}
   _keyCodeAttack: 32
   _nextSceneName: GameOverScene
+  _animator: {fileID: 1295968405}
 --- !u!114 &1295968401
 MonoBehaviour:
   m_ObjectHideFlags: 0
