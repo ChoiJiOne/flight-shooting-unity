@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3581233041204277247}
   - component: {fileID: 5781814329038996304}
   - component: {fileID: 8927018206256899536}
-  - component: {fileID: 7040296421650897478}
+  - component: {fileID: 84668909182428069}
   - component: {fileID: -5216735342533645686}
+  - component: {fileID: 7040296421650897478}
   - component: {fileID: 2684654684565396464}
   m_Layer: 0
   m_Name: Enemy
@@ -121,6 +122,35 @@ MonoBehaviour:
   _damage: 1
   _scorePoint: 100
   _explosionPrefab: {fileID: 9200922369643526081, guid: a5b1538401a9f31458977b546658fe0e, type: 3}
+--- !u!114 &84668909182428069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705557482175183361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d125c599aca5ffc48bebcd02a0360484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 4
+  _enemyController: {fileID: 8927018206256899536}
+  _spriteRenderer: {fileID: 3581233041204277247}
+--- !u!114 &-5216735342533645686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705557482175183361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b61638d9096e5c49b43802d1e2def92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stageData: {fileID: 11400000, guid: 1475a2a1f5e4af0429900827595c68c4, type: 2}
+  _destroyWeight: 2
 --- !u!58 &7040296421650897478
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -157,20 +187,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.35
---- !u!114 &-5216735342533645686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6705557482175183361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b61638d9096e5c49b43802d1e2def92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stageData: {fileID: 11400000, guid: 1475a2a1f5e4af0429900827595c68c4, type: 2}
-  _destroyWeight: 2
 --- !u!95 &2684654684565396464
 Animator:
   serializedVersion: 7
