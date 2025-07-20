@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class EnemyHp : MonoBehaviour
 {
+    public float MaxHp => _maxHp;
+    public float CurrentHp => _currentHp;
+
     [SerializeField] private float _maxHp = 4.0f;
     [SerializeField] private EnemyController _enemyController;
     [SerializeField] private SpriteRenderer _spriteRenderer;
