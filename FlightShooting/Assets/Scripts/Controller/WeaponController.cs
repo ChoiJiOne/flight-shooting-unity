@@ -7,6 +7,8 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private float _attackRate = 0.1f;
     [SerializeField] AudioSource _audioSource;
 
+    private int _attackLevel = 1;
+
     public void StartFiring()
     {
         StartCoroutine(nameof(TryAttack));
@@ -21,10 +23,37 @@ public class WeaponController : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+            AttackByLevel();
             _audioSource.Play();
 
             yield return new WaitForSeconds(_attackRate);
+        }
+    }
+
+    private void AttackByLevel()
+    {
+        GameObject projectileClone = null;
+
+        switch (_attackLevel)
+        {
+            case 1:
+                Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+                break;
+
+            case 2:
+                Instantiate(_projectilePrefab, transform.position + Vector3.left * 0.2f, Quaternion.identity);
+                Instantiate(_projectilePrefab, transform.position + Vector3.right * 0.2f, Quaternion.identity);
+                break;
+
+            case 3:
+                Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+
+                projectileClone = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+                projectileClone.GetComponent<MovementController>().MoveTo(new Vector3(-0.2f, 1.0f, 0.0f));
+
+                projectileClone = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+                projectileClone.GetComponent<MovementController>().MoveTo(new Vector3(0.2f, 1.0f, 0.0f));
+                break;
         }
     }
 }
