@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("KeyCode")]
     [SerializeField] private KeyCode _keyCodeAttack = KeyCode.Space;
+
+    [Header("Scene")]
+    [SerializeField] private string _nextSceneName;
 
     private int _score;
 
@@ -43,5 +47,10 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(transform.position.x, _stageData.LimitMin.x, _stageData.LimitMax.x),
             Mathf.Clamp(transform.position.y, _stageData.LimitMin.y, _stageData.LimitMax.y)
         );
+    }
+
+    public void OnDie()
+    {
+        SceneManager.LoadScene(_nextSceneName);
     }
 }

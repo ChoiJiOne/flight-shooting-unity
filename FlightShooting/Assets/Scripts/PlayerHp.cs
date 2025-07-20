@@ -8,6 +8,7 @@ public class PlayerHp : MonoBehaviour
 
     [SerializeField] private float _maxHp = 10.0f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private PlayerController _playerController;
 
     private float _currentHp = 0.0f;
 
@@ -25,7 +26,7 @@ public class PlayerHp : MonoBehaviour
 
         if (_currentHp <= 0.0f)
         {
-            Debug.Log($"Player HP: {_currentHp}... Die");
+            _playerController.OnDie();
         }
     }
 

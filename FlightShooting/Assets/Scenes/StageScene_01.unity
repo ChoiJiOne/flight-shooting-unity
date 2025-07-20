@@ -868,6 +868,7 @@ MonoBehaviour:
   _movementController: {fileID: 1295968399}
   _weaponController: {fileID: 1295968401}
   _keyCodeAttack: 32
+  _nextSceneName: GameOverScene
 --- !u!114 &1295968401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 10
   _spriteRenderer: {fileID: 1295968397}
+  _playerController: {fileID: 1295968400}
 --- !u!1 &1433137054
 GameObject:
   m_ObjectHideFlags: 0
