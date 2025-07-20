@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int Score
+    {
+        set => _score = Mathf.Max(0, value);
+        get => _score;
+    }
+
     [Header("Stage")]
     [SerializeField] private StageData _stageData;
 
@@ -11,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("KeyCode")]
     [SerializeField] private KeyCode _keyCodeAttack = KeyCode.Space;
+
+    private int _score;
 
     private void Update()
     {
