@@ -46,6 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3417598162761140072}
   - component: {fileID: 7817619291640525518}
+  - component: {fileID: 4024023295565090815}
   m_Layer: 5
   m_Name: EnemyHp
   m_TagString: Untagged
@@ -125,6 +126,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4024023295565090815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956368680530046933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b0f85a2c850af498238068d51db009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: {x: 0, y: -35, z: 0}
+  _rectTransform: {fileID: 3417598162761140072}
 --- !u!1 &2973030229099365562
 GameObject:
   m_ObjectHideFlags: 0

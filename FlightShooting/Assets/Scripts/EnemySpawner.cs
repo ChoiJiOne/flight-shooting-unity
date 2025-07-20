@@ -36,5 +36,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject enemyHpClone = Instantiate(_enemyHpPrefab);
         enemyHpClone.transform.SetParent(_canvasTransform);
         enemyHpClone.transform.localScale = Vector3.one;
+
+        enemyHpClone.GetComponent<SliderPositionAudoSetter>().Setup(enemy.transform);
     }
 }
