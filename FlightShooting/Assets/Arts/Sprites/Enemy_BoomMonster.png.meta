@@ -236,7 +236,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy_BoomMonster_0: 2853510070460871050
+      Enemy_BoomMonster_1: -3307389623469859528
+      Enemy_BoomMonster_2: 2803781387579177172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

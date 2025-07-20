@@ -386,7 +386,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GameOverButtonReturn_0: -2920426658727991332
+      GameOverButtonReturn_1: 8694488835541757415
+      GameOverButtonReturn_2: -404447373702963625
+      GameOverButtonReturn_3: 1347851887712736641
+      GameOverButtonReturn_4: 1895973615117577248
+      GameOverButtonReturn_5: -5082234214323675005
+      GameOverButtonReturn_6: -5376365790886042278
+      GameOverButtonReturn_7: 5378427854449388378
+      GameOverButtonReturn_8: 464322561873008095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

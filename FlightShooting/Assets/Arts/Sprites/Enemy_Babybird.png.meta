@@ -261,7 +261,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy_Babybird_0: 6426775830247676507
+      Enemy_Babybird_1: 6380397496399239030
+      Enemy_Babybird_2: -4047003443207666316
+      Enemy_Babybird_3: -8709434925534320902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
