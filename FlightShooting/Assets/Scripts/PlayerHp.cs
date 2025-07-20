@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class DamageEffect : MonoBehaviour
+public class PlayerHp : MonoBehaviour
 {
     [SerializeField] private float _maxHp = 10.0f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
