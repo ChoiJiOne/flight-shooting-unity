@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class MeteoriteController : MonoBehaviour
 {
-    [SerializeField] private int _damage = 1;
+    [SerializeField] private int _damage = 5;
+    [SerializeField] private GameObject _explosionPrefab;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -10,6 +11,7 @@ public class MeteoriteController : MonoBehaviour
         {
             collision.GetComponent<PlayerHp>().TakeDamage(_damage);
             
+            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
