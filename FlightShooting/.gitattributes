@@ -1,0 +1,2 @@
+# TextMeshPro 셰이더 제외
+Assets/TextMesh Pro/**/*.shader linguist-vendored
