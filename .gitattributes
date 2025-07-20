@@ -1,3 +1,4 @@
 # TextMeshPro 셰이더 제외
 *.shader linguist-vendored
 *.hlsl linguist-vendored
+*.cginc linguist-vendored
