@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8927018206256899536}
   - component: {fileID: 7040296421650897478}
   - component: {fileID: -5216735342533645686}
+  - component: {fileID: 2684654684565396464}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -117,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cdd9db4f5305e43ae3e059b8cf5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
+  _scorePoint: 100
 --- !u!58 &7040296421650897478
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -167,3 +170,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stageData: {fileID: 11400000, guid: 1475a2a1f5e4af0429900827595c68c4, type: 2}
   _destroyWeight: 2
+--- !u!95 &2684654684565396464
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705557482175183361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92591686bc563cf468a8fe7bee3ec0e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
