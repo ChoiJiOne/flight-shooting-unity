@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnDie()
     {
+        PlayerPrefs.SetInt(nameof(Score), Score);
         SceneManager.LoadScene(_nextSceneName);
     }
 }
