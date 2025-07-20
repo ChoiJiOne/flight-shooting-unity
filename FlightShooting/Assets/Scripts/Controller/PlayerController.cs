@@ -22,10 +22,19 @@ public class PlayerController : MonoBehaviour
     [Header("Scene")]
     [SerializeField] private string _nextSceneName;
 
+    [Header("Animation")]
+    [SerializeField] private Animator _animator;
+
+    private bool _isDie = false;
     private int _score;
 
     private void Update()
     {
+        if (_isDie)
+        {
+            return;
+        }
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
@@ -50,6 +59,16 @@ public class PlayerController : MonoBehaviour
     }
 
     public void OnDie()
+    {
+        _movementController.MoveTo(Vector3.zero);
+        _animator.SetTrigger(nameof(OnDie));
+
+        Destroy(GetComponent<CircleCollider2D>());
+
+        _isDie = true;
+    }
+
+    public void OnDieEvent()
     {
         PlayerPrefs.SetInt(nameof(Score), Score);
         SceneManager.LoadScene(_nextSceneName);
