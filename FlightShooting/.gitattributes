@@ -1,2 +1,3 @@
 # TextMeshPro 셰이더 제외
-Assets/TextMesh Pro/**/*.shader linguist-vendored
+Assets/TextMesh Pro/Shaders/*.shader linguist-vendored
+Assets/TextMesh Pro/Shaders/*.hlsl linguist-vendored
