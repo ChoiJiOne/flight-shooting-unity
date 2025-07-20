@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Twinkle : MonoBehaviour
+public class TwinkleEffect : MonoBehaviour
 {
     [SerializeField] private float _fadeTime = 0.1f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
