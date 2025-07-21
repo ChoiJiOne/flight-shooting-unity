@@ -7,7 +7,11 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private float _attackRate = 0.1f;
     [SerializeField] AudioSource _audioSource;
 
+    [Header("Boom")]
+    [SerializeField] private GameObject _boomPrefab;
+    
     private int _attackLevel = 1;
+    private int _boomCount = 3;
 
     public void StartFiring()
     {
@@ -17,6 +21,15 @@ public class WeaponController : MonoBehaviour
     public void StopFiring()
     {
         StopCoroutine(nameof(TryAttack));
+    }
+
+    public void StartBoom()
+    {
+        if (_boomCount > 0)
+        {
+            _boomCount--;
+            Instantiate(_boomPrefab, transform.position, Quaternion.identity);
+        }
     }
 
     private IEnumerator TryAttack()

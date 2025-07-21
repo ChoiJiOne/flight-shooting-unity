@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("KeyCode")]
     [SerializeField] private KeyCode _keyCodeAttack = KeyCode.Space;
+    [SerializeField] private KeyCode _KeyCodeBoom = KeyCode.Z;
 
     [Header("Scene")]
     [SerializeField] private string _nextSceneName;
@@ -47,6 +48,11 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyUp(_keyCodeAttack))
         {
             _weaponController.StopFiring();
+        }
+
+        if (Input.GetKeyDown(_KeyCodeBoom))
+        {
+            _weaponController.StartBoom();
         }
     }
 

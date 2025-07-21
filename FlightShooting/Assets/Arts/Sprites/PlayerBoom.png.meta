@@ -166,8 +166,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 74
-        height: 70
+        width: 73
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,10 +186,10 @@ TextureImporter:
       name: PlayerBoom_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 75
         y: 0
-        width: 76
-        height: 74
+        width: 74
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,9 +208,9 @@ TextureImporter:
       name: PlayerBoom_2
       rect:
         serializedVersion: 2
-        x: 150
+        x: 151
         y: 0
-        width: 74
+        width: 72
         height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -230,9 +230,9 @@ TextureImporter:
       name: PlayerBoom_3
       rect:
         serializedVersion: 2
-        x: 226
+        x: 227
         y: 0
-        width: 74
+        width: 72
         height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -252,7 +252,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0f6b6ee9f047de047943ea869f5abdd8
     internalID: 0
     vertices: []
     indices: 

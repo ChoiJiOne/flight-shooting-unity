@@ -10,9 +10,13 @@ public class MeteoriteController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerHp>().TakeDamage(_damage);
-            
-            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            OnDie();
         }
+    }
+
+    public void OnDie()
+    {
+        Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
