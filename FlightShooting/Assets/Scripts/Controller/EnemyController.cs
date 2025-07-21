@@ -41,9 +41,13 @@ public class EnemyController : MonoBehaviour
         {
             Instantiate(_itemPrefabs[0], transform.position, Quaternion.identity);
         }
-        else if (spawnItem < 90)
+        else if (spawnItem < 60)
         {
             Instantiate(_itemPrefabs[1], transform.position, Quaternion.identity);
+        } 
+        else if (spawnItem < 90)
+        {
+            Instantiate(_itemPrefabs[2], transform.position, Quaternion.identity);
         }
     }
 }

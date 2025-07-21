@@ -4,7 +4,11 @@ using UnityEngine;
 public class PlayerHp : MonoBehaviour
 {
     public float MaxHp => _maxHp;
-    public float CurrentHp => _currentHp;
+    public float CurrentHp
+    {
+        set => _currentHp = Mathf.Clamp(value, 0, _maxHp);
+        get => _currentHp;
+    }
 
     [SerializeField] private float _maxHp = 10.0f;
     [SerializeField] private SpriteRenderer _spriteRenderer;

@@ -4,6 +4,7 @@ public enum ItemType
 {
     POWER_UP = 0,
     BOOM = 1,
+    HEART = 2,
 }
 
 public class Item : MonoBehaviour
@@ -38,6 +39,10 @@ public class Item : MonoBehaviour
 
             case ItemType.BOOM:
                 player.GetComponent<WeaponController>().BoomCount++;
+                break;
+
+            case ItemType.HEART:
+                player.GetComponent<PlayerHp>().CurrentHp += 2;
                 break;
         }
     }
