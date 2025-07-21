@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
+    public int BoomCount => _boomCount;
+
     [SerializeField] private GameObject _projectilePrefab;
     [SerializeField] private float _attackRate = 0.1f;
     [SerializeField] AudioSource _audioSource;
