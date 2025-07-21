@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    public int BoomCount => _boomCount;
     public int AttackLevel
     {
         set => _attackLevel = Mathf.Clamp(value, 1, _maxAttackLevel);
         get => _attackLevel;
+    }
+    public int BoomCount
+    {
+        set => _boomCount = Mathf.Max(0, value);
+        get => _boomCount;
     }
 
     [SerializeField] private GameObject _projectilePrefab;

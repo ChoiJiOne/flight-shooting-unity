@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 9127383143718221000, guid: eb612c38af3e4a041a504db71b91f5a5, type: 3}
   _attackRate: 0.1
+  _maxAttackLevel: 3
   _audioSource: {fileID: 1295968406}
   _boomPrefab: {fileID: 2538377566829682173, guid: ee2e6dd8a94e18c42bce544a471c6f1d, type: 3}
 --- !u!50 &1295968402
