@@ -5,6 +5,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int _damage = 1;
     [SerializeField] int _scorePoint = 100;
     [SerializeField] GameObject _explosionPrefab;
+    [SerializeField] private GameObject[] _itemPrefabs;
 
     private PlayerController _playerController;
 
@@ -27,6 +28,18 @@ public class EnemyController : MonoBehaviour
         _playerController.Score += _scorePoint;
 
         Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+
+        SpawnItem();
+
         Destroy(gameObject);
+    }
+
+    private void SpawnItem()
+    {
+        int spawnItem = Random.Range(0, 100);
+        if (spawnItem < 10)
+        {
+            Instantiate(_itemPrefabs[0], transform.position, Quaternion.identity);
+        }
     }
 }
