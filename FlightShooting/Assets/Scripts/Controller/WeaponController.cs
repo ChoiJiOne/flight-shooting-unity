@@ -4,9 +4,15 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     public int BoomCount => _boomCount;
+    public int AttackLevel
+    {
+        set => _attackLevel = Mathf.Clamp(value, 1, _maxAttackLevel);
+        get => _attackLevel;
+    }
 
     [SerializeField] private GameObject _projectilePrefab;
     [SerializeField] private float _attackRate = 0.1f;
+    [SerializeField] private int _maxAttackLevel = 3;
     [SerializeField] AudioSource _audioSource;
 
     [Header("Boom")]
