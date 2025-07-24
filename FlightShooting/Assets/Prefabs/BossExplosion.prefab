@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2940829546724951729}
   - component: {fileID: 7308553472262146581}
   - component: {fileID: 8601147659996810349}
+  - component: {fileID: -9119371367945999251}
+  - component: {fileID: 8324512921836387403}
   m_Layer: 0
   m_Name: BossExplosion
   m_TagString: Untagged
@@ -4833,3 +4835,28 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-9119371367945999251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837247068857128639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9ce46e91af4144c861894402968a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particleSystem: {fileID: 7308553472262146581}
+--- !u!114 &8324512921836387403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837247068857128639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b4077d65ef0004c8e473b2fc698e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

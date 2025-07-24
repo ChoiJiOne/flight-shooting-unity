@@ -897,6 +897,8 @@ MonoBehaviour:
   _weaponController: {fileID: 666862458}
   _bossHp: {fileID: 666862459}
   _explosionPrefab: {fileID: 2837247068857128639, guid: be0e6f7d9d17ee7498abfd68fbde1338, type: 3}
+  _playerController: {fileID: 1295968400}
+  _nextSceneName: GameClearScene
 --- !u!114 &666862458
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,6 +19,8 @@ public class BossController : MonoBehaviour
     [SerializeField] private BossWeaponController _weaponController;
     [SerializeField] private BossHp _bossHp;
     [SerializeField] private GameObject _explosionPrefab;
+    [SerializeField] private PlayerController _playerController;
+    [SerializeField] private string _nextSceneName;
 
     private Dictionary<EBossState, string> _bossStateExecuteDic;
 
@@ -119,7 +121,9 @@ public class BossController : MonoBehaviour
 
     public void OnDie()
     {
-        Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        GameObject clone = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        clone.GetComponent<BossExplosion>().Setup(_playerController, _nextSceneName);
+
         Destroy(gameObject);
     }
 }
