@@ -8,6 +8,7 @@ public class BossHp : MonoBehaviour
 
     [SerializeField] private float _maxHp = 1000.0f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private BossController _bossController;
 
     private float _currentHp;
 
@@ -25,7 +26,7 @@ public class BossHp : MonoBehaviour
 
         if (_currentHp <= 0.0f)
         {
-
+            _bossController.OnDie();
         }
     }
 

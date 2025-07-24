@@ -18,6 +18,7 @@ public class BossController : MonoBehaviour
     [SerializeField] private MovementController _moveController;
     [SerializeField] private BossWeaponController _weaponController;
     [SerializeField] private BossHp _bossHp;
+    [SerializeField] private GameObject _explosionPrefab;
 
     private Dictionary<EBossState, string> _bossStateExecuteDic;
 
@@ -114,5 +115,11 @@ public class BossController : MonoBehaviour
             
             yield return null;
         }
+    }
+
+    public void OnDie()
+    {
+        Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
