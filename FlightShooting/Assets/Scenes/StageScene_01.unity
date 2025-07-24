@@ -566,6 +566,7 @@ GameObject:
   - component: {fileID: 666862456}
   - component: {fileID: 666862455}
   - component: {fileID: 666862457}
+  - component: {fileID: 666862458}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -740,6 +741,20 @@ MonoBehaviour:
   _bossAppearPoint: 2.5
   _bossState: 0
   _moveController: {fileID: 666862456}
+  _weaponController: {fileID: 666862458}
+--- !u!114 &666862458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666862452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad60f1de249af674298fd0c67020f29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectilePrefab: {fileID: 7093351629640383856, guid: 8cec0aa5fc7e9e143a3f9e06c21fed4e, type: 3}
 --- !u!1 &675912160
 GameObject:
   m_ObjectHideFlags: 0

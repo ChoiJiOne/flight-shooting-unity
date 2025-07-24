@@ -68,6 +68,6 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         _bossWarningText.SetActive(false);
         _boss.SetActive(true);
-        _boss.GetComponent<BossController>().ChangeState(EBossState.MoveToAppearPoint);
+        _boss.GetComponent<BossController>().ChangeState(EBossState.MOVE_TO_APPEAR_POINT);
     }
 }
