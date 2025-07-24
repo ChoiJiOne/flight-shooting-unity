@@ -5,6 +5,7 @@ using UnityEngine;
 public enum EAttackType
 {
     CIRCLE_FILE = 0,
+    SINGLE_FIRE_TO_CENTER_POSITION,
 }
 
 public class BossWeaponController : MonoBehaviour
@@ -18,6 +19,7 @@ public class BossWeaponController : MonoBehaviour
         _attackExecuteDic = new()
         {
             {EAttackType.CIRCLE_FILE, nameof(CircleFire) },
+            {EAttackType.SINGLE_FIRE_TO_CENTER_POSITION, nameof(SingleFireToCenterPosition) },
         };
     }
 
@@ -53,6 +55,22 @@ public class BossWeaponController : MonoBehaviour
             }
 
             weightAngle += 1;
+
+            yield return new WaitForSeconds(attackRate);
+        }
+    }
+
+    private IEnumerator SingleFireToCenterPosition()
+    {
+        Vector3 targetPosition = Vector3.zero;
+        float attackRate = 0.1f;
+
+        while (true)
+        {
+            GameObject clone = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+
+            Vector3 direction = (targetPosition - clone.transform.position).normalized;
+            clone.GetComponent<MovementController>().MoveTo(direction);
 
             yield return new WaitForSeconds(attackRate);
         }

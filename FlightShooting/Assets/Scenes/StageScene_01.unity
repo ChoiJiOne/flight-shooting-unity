@@ -890,10 +890,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35169cd3b5d34f84cb37aff8dff562eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stageData: {fileID: 11400000, guid: 1475a2a1f5e4af0429900827595c68c4, type: 2}
   _bossAppearPoint: 2.5
   _bossState: 0
   _moveController: {fileID: 666862456}
   _weaponController: {fileID: 666862458}
+  _bossHp: {fileID: 666862459}
 --- !u!114 &666862458
 MonoBehaviour:
   m_ObjectHideFlags: 0
