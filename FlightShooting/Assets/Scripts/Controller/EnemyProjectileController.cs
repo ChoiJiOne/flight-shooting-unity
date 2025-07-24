@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyProjectileController : MonoBehaviour
 {
     [SerializeField] private int _damage = 1;
+    [SerializeField] private GameObject _explosionPrefab;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,5 +13,11 @@ public class EnemyProjectileController : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+
+    public void OnDie()
+    {
+        Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

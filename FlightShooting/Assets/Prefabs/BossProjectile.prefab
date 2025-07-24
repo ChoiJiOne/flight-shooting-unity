@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3591960094315055995}
   m_Layer: 0
   m_Name: BossProjectile
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+  _explosionPrefab: {fileID: 9200922369643526081, guid: a5b1538401a9f31458977b546658fe0e, type: 3}
 --- !u!114 &3591960094315055995
 MonoBehaviour:
   m_ObjectHideFlags: 0
