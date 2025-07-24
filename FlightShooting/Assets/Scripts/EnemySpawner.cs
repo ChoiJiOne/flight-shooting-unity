@@ -16,9 +16,11 @@ public class EnemySpawner : MonoBehaviour
 
     [Space(10)]
     [SerializeField] private BGMController _bgmController;
+    [SerializeField] private GameObject _bossWarningText;
     
     private void Awake()
     {
+        _bossWarningText.SetActive(false);
         StartCoroutine(nameof(SpawnEnemy));
     }
 
@@ -58,6 +60,9 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator SpawnBoss()
     {
         _bgmController.ChangeBGM(EBGMType.BOSS);
-        yield return null;
+
+        _bossWarningText.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+        _bossWarningText.SetActive(false);
     }
 }
