@@ -12,6 +12,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject _enemyHpPrefab;
     [SerializeField] private Transform _canvasTransform;
 
+    [SerializeField] private int _maxEnemyCount = 100;
+
+    [Space(10)]
+    [SerializeField] private BGMController _bgmController;
+    
     private void Awake()
     {
         StartCoroutine(nameof(SpawnEnemy));
@@ -19,6 +24,8 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
+        int currentEnemyCount = 0;
+
         while (true)
         {
             float positionX = Random.Range(_stageData.LimitMin.x, _stageData.LimitMax.x);
@@ -26,6 +33,13 @@ public class EnemySpawner : MonoBehaviour
 
             GameObject enemyClone = Instantiate(_enemyPrefab, position, Quaternion.identity);
             SpawnEnemyHp(enemyClone);
+
+            currentEnemyCount++;
+            if (currentEnemyCount == _maxEnemyCount)
+            {
+                StartCoroutine(nameof(SpawnBoss));
+                break;
+            }
 
             yield return new WaitForSeconds(_spawnTime);
         }
@@ -39,5 +53,11 @@ public class EnemySpawner : MonoBehaviour
 
         enemyHpClone.GetComponent<SliderPositionAudoSetter>().Setup(enemy.transform);
         enemyHpClone.GetComponent<EnemyHpUI>().Setup(enemy.GetComponent<EnemyHp>());
+    }
+
+    private IEnumerator SpawnBoss()
+    {
+        _bgmController.ChangeBGM(EBGMType.BOSS);
+        yield return null;
     }
 }

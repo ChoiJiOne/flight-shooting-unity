@@ -338,6 +338,8 @@ MonoBehaviour:
   _spawnTime: 0.35
   _enemyHpPrefab: {fileID: 2956368680530046933, guid: a6918d65c80611747a5159e22d85b8bf, type: 3}
   _canvasTransform: {fileID: 1663837145}
+  _maxEnemyCount: 5
+  _bgmController: {fileID: 1878043887}
 --- !u!4 &360425022
 Transform:
   m_ObjectHideFlags: 0
@@ -1551,6 +1553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878043886}
   - component: {fileID: 1878043885}
+  - component: {fileID: 1878043887}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -1670,6 +1673,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878043887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878043884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a67bba7f1f85c14a997aca51455c366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bgmClipList:
+  - {fileID: 8300000, guid: ca2ae640ce55f3b43b3131a5ce2348b7, type: 3}
+  - {fileID: 8300000, guid: 9412770f8f1e11546826984fa3bf2f1f, type: 3}
+  _audioSource: {fileID: 1878043885}
 --- !u!1 &1884678435
 GameObject:
   m_ObjectHideFlags: 0
