@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class BossHp : MonoBehaviour
 {
+    public float MaxHp => _maxHp;
+    public float CurrentHp => _currentHp;
+
     [SerializeField] private float _maxHp = 1000.0f;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 

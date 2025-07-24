@@ -18,11 +18,13 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject _boss;
     [SerializeField] private BGMController _bgmController;
     [SerializeField] private GameObject _bossWarningText;
+    [SerializeField] private GameObject _bossHpUI;
     
     private void Awake()
     {
         _bossWarningText.SetActive(false);
         _boss.SetActive(false);
+        _bossHpUI.SetActive(false);
 
         StartCoroutine(nameof(SpawnEnemy));
     }
@@ -67,6 +69,7 @@ public class EnemySpawner : MonoBehaviour
         _bossWarningText.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         _bossWarningText.SetActive(false);
+        _bossHpUI.SetActive(true);
         _boss.SetActive(true);
         _boss.GetComponent<BossController>().ChangeState(EBossState.MOVE_TO_APPEAR_POINT);
     }
