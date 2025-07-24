@@ -567,9 +567,10 @@ GameObject:
   - component: {fileID: 666862455}
   - component: {fileID: 666862457}
   - component: {fileID: 666862458}
+  - component: {fileID: 666862459}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,6 +756,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 7093351629640383856, guid: 8cec0aa5fc7e9e143a3f9e06c21fed4e, type: 3}
+--- !u!114 &666862459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666862452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d4582cac105084fabb847fb10d0093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 1000
+  _spriteRenderer: {fileID: 666862453}
 --- !u!1 &675912160
 GameObject:
   m_ObjectHideFlags: 0

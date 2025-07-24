@@ -9,7 +9,11 @@ public class ProjectileController : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<EnemyHp>().TakeDamage(_damage);
-
+            Destroy(gameObject);
+        }
+        else if (collision.CompareTag("Boss"))
+        {
+            collision.GetComponent<BossHp>().TakeDamage(_damage);
             Destroy(gameObject);
         }
     }

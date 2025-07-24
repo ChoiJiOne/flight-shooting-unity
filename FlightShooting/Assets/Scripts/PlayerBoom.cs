@@ -7,6 +7,7 @@ public class PlayerBoom : MonoBehaviour
     [SerializeField] private AudioClip _boomAudio;
     [SerializeField] private Animator _animator;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private int _boomDamage = 100;
 
     private float _boomDelay = 0.5f;
     
@@ -56,6 +57,12 @@ public class PlayerBoom : MonoBehaviour
         for (int idx = 0; idx < projectiles.Length; idx++)
         {
             projectiles[idx].GetComponent<EnemyProjectileController>().OnDie();
+        }
+
+        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+        if (boss != null)
+        {
+            boss.GetComponent<BossHp>().TakeDamage(_boomDamage);
         }
 
         Destroy(gameObject);
