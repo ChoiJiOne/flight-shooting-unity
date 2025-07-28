@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour, ICharacterController
 {
     [SerializeField] private int _damage = 1;
     [SerializeField] int _scorePoint = 100;

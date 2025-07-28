@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossController : MonoBehaviour
+public class BossController : MonoBehaviour, ICharacterController
 {
     [SerializeField] private StageData _stageData;
     [SerializeField] private float _bossAppearPoint = 2.5f;
