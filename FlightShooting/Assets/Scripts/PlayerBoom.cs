@@ -62,7 +62,7 @@ public class PlayerBoom : MonoBehaviour
         GameObject boss = GameObject.FindGameObjectWithTag("Boss");
         if (boss != null)
         {
-            boss.GetComponent<BossHp>().TakeDamage(_boomDamage);
+            boss.GetComponent<CharacterHp>().TakeDamage(_boomDamage);
         }
 
         Destroy(gameObject);

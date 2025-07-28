@@ -7,18 +7,22 @@ public class EnemyController : MonoBehaviour, ICharacterController
     [SerializeField] GameObject _explosionPrefab;
     [SerializeField] private GameObject[] _itemPrefabs;
 
+    [Header("Character")]
+    [SerializeField] private CharacterHp _enemyHp;
+
     private PlayerController _playerController;
 
     private void Awake()
     {
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        _enemyHp.SetCharacterController(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerHp>().TakeDamage(_damage);
+            collision.GetComponent<CharacterHp>().TakeDamage(_damage);
             OnDie();
         }
     }

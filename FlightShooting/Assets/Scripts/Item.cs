@@ -35,7 +35,7 @@ public class Item : MonoBehaviour
                 break;
 
             case EItem.HEART:
-                player.GetComponent<PlayerHp>().CurrentHp += 2;
+                player.GetComponent<CharacterHp>().CurrentHp += 2;
                 break;
         }
     }

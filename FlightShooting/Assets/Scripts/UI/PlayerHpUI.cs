@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerHpUI : MonoBehaviour
 {
-    [SerializeField] private PlayerHp _playerHp;
+    [SerializeField] private CharacterHp _playerHp;
     [SerializeField] private Slider _hpSlider;
 
     private void Update()

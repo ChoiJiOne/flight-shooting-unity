@@ -5,9 +5,9 @@ public class EnemyHpUI : MonoBehaviour
 {
     [SerializeField] private Slider _hpSlider;
 
-    private EnemyHp _enemyHp;
+    private CharacterHp _enemyHp;
 
-    public void Setup(EnemyHp enemyHp)
+    public void Setup(CharacterHp enemyHp)
     {
         _enemyHp = enemyHp;
     }

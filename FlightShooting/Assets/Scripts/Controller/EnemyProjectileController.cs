@@ -9,7 +9,7 @@ public class EnemyProjectileController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerHp>().TakeDamage(_damage);
+            collision.GetComponent<CharacterHp>().TakeDamage(_damage);
 
             Destroy(gameObject);
         }

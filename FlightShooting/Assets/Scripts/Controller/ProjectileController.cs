@@ -6,14 +6,9 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Boss"))
         {
-            collision.GetComponent<EnemyHp>().TakeDamage(_damage);
-            Destroy(gameObject);
-        }
-        else if (collision.CompareTag("Boss"))
-        {
-            collision.GetComponent<BossHp>().TakeDamage(_damage);
+            collision.GetComponent<CharacterHp>().TakeDamage(_damage);
             Destroy(gameObject);
         }
     }

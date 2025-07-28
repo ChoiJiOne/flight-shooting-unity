@@ -26,8 +26,16 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [Header("Animation")]
     [SerializeField] private Animator _animator;
 
+    [Header("Character")]
+    [SerializeField] CharacterHp _playerHp;
+
     private bool _isDie = false;
     private int _score;
+
+    private void Awake()
+    {
+        _playerHp.SetCharacterController(this);
+    }
 
     private void Update()
     {

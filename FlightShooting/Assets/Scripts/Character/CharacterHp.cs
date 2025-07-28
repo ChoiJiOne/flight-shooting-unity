@@ -13,20 +13,23 @@ public class CharacterHp : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Color _hitColor;
     [SerializeField] private Color _defaultColor;
+    [SerializeField] private float _maxHp;
     [SerializeField] private float _damageFlashDuration = 0.1f;
 
-    private float _maxHp;
     private float _currentHp;
     private ICharacterController _characterController;
 
-    public void Init(float maxHp, ICharacterController characterController)
+    private void Awake()
     {
-        _maxHp = Mathf.Clamp(maxHp, 1, maxHp);
         _currentHp = _maxHp;
+    }
+
+    public void SetCharacterController(ICharacterController characterController)
+    {
         _characterController = characterController;
     }
 
-    public void TakeDagame(float damage)
+    public void TakeDamage(float damage)
     {
         _currentHp -= damage;
 

@@ -709,17 +709,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6521482577970742078, guid: a336b11650fa8b2429ad1f6d57531917, type: 3}
   m_PrefabInstance: {fileID: 7693805183744499337}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &666862459 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3735162880029836033, guid: a336b11650fa8b2429ad1f6d57531917, type: 3}
-  m_PrefabInstance: {fileID: 7693805183744499337}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666862452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d4582cac105084fabb847fb10d0093, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &675912160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1206,7 @@ GameObject:
   - component: {fileID: 1295968400}
   - component: {fileID: 1295968399}
   - component: {fileID: 1295968401}
-  - component: {fileID: 1295968404}
+  - component: {fileID: 1295968407}
   - component: {fileID: 1295968403}
   - component: {fileID: 1295968402}
   - component: {fileID: 1295968405}
@@ -1332,6 +1321,7 @@ MonoBehaviour:
   _KeyCodeBoom: 122
   _nextSceneName: GameOverScene
   _animator: {fileID: 1295968405}
+  _playerHp: {fileID: 1295968407}
 --- !u!114 &1295968401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,21 +1402,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.25
---- !u!114 &1295968404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295968396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4565e970d449c43439f99850d366c94b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHp: 10000
-  _spriteRenderer: {fileID: 1295968397}
-  _playerController: {fileID: 1295968400}
 --- !u!95 &1295968405
 Animator:
   serializedVersion: 7
@@ -1546,6 +1521,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1295968407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295968396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0d817dc42707e41969717ecf82fe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1295968397}
+  _hitColor: {r: 1, g: 0, b: 0, a: 1}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _maxHp: 10000
+  _damageFlashDuration: 0.1
 --- !u!1 &1407189541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +1967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13906f111b47dfd4299cbe83268cda17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bossHp: {fileID: 666862459}
+  _bossHp: {fileID: 7693805183744499338}
   _sliderHp: {fileID: 1685243803}
 --- !u!1 &1751666961
 GameObject:
@@ -2115,7 +2107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c074eb9ac32a4d84e9645cb2e83b157c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHp: {fileID: 1295968404}
+  _playerHp: {fileID: 1295968407}
   _hpSlider: {fileID: 1814678155}
 --- !u!1 &1878043884
 GameObject:
@@ -2562,6 +2554,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a336b11650fa8b2429ad1f6d57531917, type: 3}
+--- !u!114 &7693805183744499338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5391911587140390545, guid: a336b11650fa8b2429ad1f6d57531917, type: 3}
+  m_PrefabInstance: {fileID: 7693805183744499337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666862452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0d817dc42707e41969717ecf82fe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

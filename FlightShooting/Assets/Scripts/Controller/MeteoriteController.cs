@@ -9,7 +9,7 @@ public class MeteoriteController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerHp>().TakeDamage(_damage);
+            collision.GetComponent<CharacterHp>().TakeDamage(_damage);
             OnDie();
         }
     }

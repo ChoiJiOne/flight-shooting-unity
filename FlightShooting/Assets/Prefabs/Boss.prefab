@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5217079936857477792}
   - component: {fileID: 9157082403641438338}
   - component: {fileID: 8524102155503799748}
-  - component: {fileID: 3735162880029836033}
+  - component: {fileID: 5391911587140390545}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -191,7 +191,7 @@ MonoBehaviour:
   _bossState: 0
   _moveController: {fileID: 997660562803484328}
   _weaponController: {fileID: 8524102155503799748}
-  _bossHp: {fileID: 3735162880029836033}
+  _bossHp: {fileID: 5391911587140390545}
   _explosionPrefab: {fileID: 2837247068857128639, guid: be0e6f7d9d17ee7498abfd68fbde1338, type: 3}
   _playerController: {fileID: 0}
   _nextSceneName: GameClearScene
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 7093351629640383856, guid: 8cec0aa5fc7e9e143a3f9e06c21fed4e, type: 3}
---- !u!114 &3735162880029836033
+--- !u!114 &5391911587140390545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,9 +217,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6521482577970742078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d4582cac105084fabb847fb10d0093, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0d817dc42707e41969717ecf82fe0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHp: 300
   _spriteRenderer: {fileID: 740798834634963800}
-  _bossController: {fileID: 9157082403641438338}
+  _hitColor: {r: 1, g: 0, b: 0, a: 1}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _maxHp: 300
+  _damageFlashDuration: 0.1

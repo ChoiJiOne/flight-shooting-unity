@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3581233041204277247}
   - component: {fileID: 5781814329038996304}
   - component: {fileID: 8927018206256899536}
-  - component: {fileID: 84668909182428069}
+  - component: {fileID: 2786291468029004417}
   - component: {fileID: -5216735342533645686}
   - component: {fileID: 7040296421650897478}
   - component: {fileID: 2684654684565396464}
@@ -126,7 +126,8 @@ MonoBehaviour:
   - {fileID: 766795061285029677, guid: 1b720471791dc1a40a12e7d260b849fd, type: 3}
   - {fileID: 1139058723544593266, guid: 93d5e8a0bc83c8b4cb0f2f02484a514d, type: 3}
   - {fileID: 766795061285029677, guid: 5b01bc9f9927345408305b63c4724b79, type: 3}
---- !u!114 &84668909182428069
+  _enemyHp: {fileID: 2786291468029004417}
+--- !u!114 &2786291468029004417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,12 +136,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6705557482175183361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d125c599aca5ffc48bebcd02a0360484, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d0d817dc42707e41969717ecf82fe0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHp: 4
-  _enemyController: {fileID: 8927018206256899536}
   _spriteRenderer: {fileID: 3581233041204277247}
+  _hitColor: {r: 1, g: 0, b: 0, a: 1}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _maxHp: 4
+  _damageFlashDuration: 0.1
 --- !u!114 &-5216735342533645686
 MonoBehaviour:
   m_ObjectHideFlags: 0

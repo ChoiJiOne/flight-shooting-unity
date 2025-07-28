@@ -9,10 +9,12 @@ public class BossController : MonoBehaviour, ICharacterController
     [SerializeField] private EBossState _bossState = EBossState.MOVE_TO_APPEAR_POINT;
     [SerializeField] private MovementController _moveController;
     [SerializeField] private BossWeaponController _weaponController;
-    [SerializeField] private BossHp _bossHp;
     [SerializeField] private GameObject _explosionPrefab;
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private string _nextSceneName;
+
+    [Header("Character")]
+    [SerializeField] private CharacterHp _bossHp;
 
     private Dictionary<EBossState, string> _bossStateExecuteDic;
 
@@ -25,6 +27,8 @@ public class BossController : MonoBehaviour, ICharacterController
             { EBossState.PHASE_02, nameof(Phase02) },
             { EBossState.PHASE_03, nameof(Phase03) },
         };
+
+        _bossHp.SetCharacterController(this);
     }
 
     public void ChangeState(EBossState newState)
