@@ -1,15 +1,8 @@
 using UnityEngine;
 
-public enum ItemType
-{
-    POWER_UP = 0,
-    BOOM = 1,
-    HEART = 2,
-}
-
 public class Item : MonoBehaviour
 {
-    [SerializeField] private ItemType _itemType;
+    [SerializeField] private EItem _item;
     [SerializeField] private MovementController _moveController;
 
     private void Awake()
@@ -31,17 +24,17 @@ public class Item : MonoBehaviour
 
     private void Use(GameObject player)
     {
-        switch (_itemType)
+        switch (_item)
         {
-            case ItemType.POWER_UP:
+            case EItem.POWER_UP:
                 player.GetComponent<WeaponController>().AttackLevel++;
                 break;
 
-            case ItemType.BOOM:
+            case EItem.BOOM:
                 player.GetComponent<WeaponController>().BoomCount++;
                 break;
 
-            case ItemType.HEART:
+            case EItem.HEART:
                 player.GetComponent<PlayerHp>().CurrentHp += 2;
                 break;
         }

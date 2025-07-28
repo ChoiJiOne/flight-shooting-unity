@@ -64,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnBoss()
     {
-        _bgmController.ChangeBGM(EBGMType.BOSS);
+        _bgmController.ChangeBGM(EBGM.BOSS);
 
         _bossWarningText.SetActive(true);
         yield return new WaitForSeconds(1.0f);

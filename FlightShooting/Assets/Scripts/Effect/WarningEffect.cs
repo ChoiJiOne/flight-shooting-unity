@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-
 public class WarningEffect : MonoBehaviour
 {
     [SerializeField] private float _lerpTime = 0.1f;

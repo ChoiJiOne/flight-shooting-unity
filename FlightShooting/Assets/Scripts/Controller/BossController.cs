@@ -2,14 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EBossState
-{
-    MOVE_TO_APPEAR_POINT,
-    PHASE_01,
-    PHASE_02,
-    PHASE_03,
-}
-
 public class BossController : MonoBehaviour
 {
     [SerializeField] private StageData _stageData;
@@ -60,13 +52,13 @@ public class BossController : MonoBehaviour
 
     private IEnumerator Phase01()
     {
-        _weaponController.StartFiring(EAttackType.CIRCLE_FILE);
+        _weaponController.StartFiring(EBossAttackPattern.CIRCLE_FILE);
 
         while (true)
         {
             if (_bossHp.CurrentHp <= _bossHp.MaxHp * 0.7f)
             {
-                _weaponController.StopFiring(EAttackType.CIRCLE_FILE);
+                _weaponController.StopFiring(EBossAttackPattern.CIRCLE_FILE);
                 ChangeState(EBossState.PHASE_02);
             }
 
@@ -76,7 +68,7 @@ public class BossController : MonoBehaviour
 
     private IEnumerator Phase02()
     {
-        _weaponController.StartFiring(EAttackType.SINGLE_FIRE_TO_CENTER_POSITION);
+        _weaponController.StartFiring(EBossAttackPattern.SINGLE_FIRE_TO_CENTER_POSITION);
 
         Vector3 direction = Vector3.right;
         _moveController.MoveTo(direction);
@@ -91,7 +83,7 @@ public class BossController : MonoBehaviour
 
             if (_bossHp.CurrentHp <= _bossHp.MaxHp * 0.3f)
             {
-                _weaponController.StopFiring(EAttackType.SINGLE_FIRE_TO_CENTER_POSITION);
+                _weaponController.StopFiring(EBossAttackPattern.SINGLE_FIRE_TO_CENTER_POSITION);
                 ChangeState(EBossState.PHASE_03);
             }
 
@@ -101,8 +93,8 @@ public class BossController : MonoBehaviour
 
     private IEnumerator Phase03()
     {
-        _weaponController.StartFiring(EAttackType.CIRCLE_FILE);
-        _weaponController.StartFiring(EAttackType.SINGLE_FIRE_TO_CENTER_POSITION);
+        _weaponController.StartFiring(EBossAttackPattern.CIRCLE_FILE);
+        _weaponController.StartFiring(EBossAttackPattern.SINGLE_FIRE_TO_CENTER_POSITION);
         
         Vector3 direction = Vector3.right;
         _moveController.MoveTo(direction);

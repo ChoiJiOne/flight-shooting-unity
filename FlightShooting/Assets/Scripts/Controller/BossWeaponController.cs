@@ -2,35 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EAttackType
-{
-    CIRCLE_FILE = 0,
-    SINGLE_FIRE_TO_CENTER_POSITION,
-}
-
 public class BossWeaponController : MonoBehaviour
 {
     [SerializeField] private GameObject _projectilePrefab;
 
-    private Dictionary<EAttackType, string> _attackExecuteDic;
+    private Dictionary<EBossAttackPattern, string> _attackExecuteDic;
 
     private void Awake()
     {
         _attackExecuteDic = new()
         {
-            {EAttackType.CIRCLE_FILE, nameof(CircleFire) },
-            {EAttackType.SINGLE_FIRE_TO_CENTER_POSITION, nameof(SingleFireToCenterPosition) },
+            {EBossAttackPattern.CIRCLE_FILE, nameof(CircleFire) },
+            {EBossAttackPattern.SINGLE_FIRE_TO_CENTER_POSITION, nameof(SingleFireToCenterPosition) },
         };
     }
 
-    public void StartFiring(EAttackType attackType)
+    public void StartFiring(EBossAttackPattern attackPattern)
     {
-        StartCoroutine(_attackExecuteDic[attackType]);
+        StartCoroutine(_attackExecuteDic[attackPattern]);
     }
 
-    public void StopFiring(EAttackType attackType)
+    public void StopFiring(EBossAttackPattern attackPattern)
     {
-        StopCoroutine(_attackExecuteDic[attackType]);
+        StopCoroutine(_attackExecuteDic[attackPattern]);
     }
 
     private IEnumerator CircleFire()
