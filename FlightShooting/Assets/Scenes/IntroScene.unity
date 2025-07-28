@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1074c542212a3a6479f9a3ceaa41c6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetScene: StageScene_01
+  _targetScene: StageScene
   _button: {fileID: 1418048352}
 --- !u!1 &1629591223
 GameObject:
